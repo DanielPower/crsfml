@@ -22,7 +22,7 @@ jobs:
       - name: Build site
         run: mkdocs build
       - name: Deploy to gh-pages
-        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        if: github.event_name == 'push' && github.ref == 'refs/heads/next'
         uses: oprypin/push-to-gh-pages@v3
         with:
           publish_dir: site
